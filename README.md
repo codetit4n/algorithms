@@ -1,4 +1,4 @@
-# algorithms-notes
+# algorithms
 
 Algorithms Repo
 
