@@ -15,10 +15,11 @@ to generalize the growth of your algorithm.
   algorithm might be more efficient.
 
 #### Some common Big O complexities
+
 ![bigOh](https://github.com/codeTIT4N/algorithms/assets/71545386/9542e03d-5413-403b-8854-1cd4cdfe7eb8)
 
 - Here: The last two algorithms with complexities O(2<sup>n</sup>) and O(n!) are algorithms which are typically run on non traditional computers(i.e., supercomputers, etc).
 
-Cheatsheet: https://www.hac:kerearth.com/practice/notes/big-o-cheatsheet-series-data-structures-and-algorithms-with-thier-complexities-1
+Cheatsheet: https://www.hackerearth.com/practice/notes/big-o-cheatsheet-series-data-structures-and-algorithms-with-thier-complexities-1
 
 TBC.
