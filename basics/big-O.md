@@ -15,8 +15,7 @@ to generalize the growth of your algorithm.
   algorithm might be more efficient.
 
 #### Some common Big O complexities
-
-<img src="../assets/bigOh.png" alt="Big Oh complexity chart" width=70% height=70%>
+![bigOh](https://github.com/codeTIT4N/algorithms/assets/71545386/9542e03d-5413-403b-8854-1cd4cdfe7eb8)
 
 - Here: The last two algorithms with complexities O(2<sup>n</sup>) and O(n!) are algorithms which are typically run on non traditional computers(i.e., supercomputers, etc).
 
