@@ -1,7 +1,7 @@
 import math
 
 # Condition 
-# 8 n^2 < 64 n log2(n)
+# 8 n^2 < 64 n log2(n) for insertion sort to be faster than merge sort
 # n < 8 * log2(n)
 
 n = 2
