@@ -1,6 +1,6 @@
 # algorithms
 
-Algorithms Repo
+Algorithms Repo.
 
 ### Credits
 
