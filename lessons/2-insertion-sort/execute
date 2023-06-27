@@ -1,3 +1,0 @@
-#!/bin/bash
-
-g++ insertion_sort.cpp && ./a.out && rm a.out

@@ -1,5 +1,13 @@
 # Insertion Sort
 
-Insertion sort works best on small number of elements.
+### Run code
 
-To execute the c++ code run: `sh execute`
+- Sort in [increasing order](./insertion_sort_inc.cpp): `sh increasing`
+- Sort in [decreasing order](./insertion_sort_dec.cpp): `sh decreasing`
+
+### Notes:
+
+- Insertion sort works best on small number of elements.
+- Think of array as 2 arrays with initially just first element in left array and rest in right array.
+- It takes an element from right side and puts it at the correct index of left side.
+- At all times left side of the array will be sorted.
