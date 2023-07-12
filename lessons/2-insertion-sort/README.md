@@ -2,8 +2,8 @@
 
 ### Run code
 
-- Sort in [increasing order](./insertion_sort_inc.cpp): `sh increasing`
-- Sort in [decreasing order](./insertion_sort_dec.cpp): `sh decreasing`
+- Sort in [increasing order](./insertion_sort_inc.cpp): `sh increasing.sh`
+- Sort in [decreasing order](./insertion_sort_dec.cpp): `sh decreasing.sh`
 
 ### Notes:
 
