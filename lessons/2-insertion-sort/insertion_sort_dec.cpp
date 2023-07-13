@@ -25,8 +25,8 @@ int main() {
     i++;
   }
 
-  cout << endl;
-  cout << "Output: ";
+  cout << endl << "Output: ";
   display(arr, len);
+  cout << endl;
   return 0;
 }
