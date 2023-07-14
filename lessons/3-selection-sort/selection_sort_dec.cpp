@@ -14,17 +14,17 @@ int main() {
   cout << "Input: ";
   display(arr, len);
 
-  for (int i = 0; i < len; i++) {
+  for (int i = 0; i < len - 1; i++) {
 
-    int smallestIndex = i;
+    int largestIndex = i;
     for (int j = i + 1; j < len; j++) {
-      if (arr[j] < arr[smallestIndex]) {
-        smallestIndex = j;
+      if (arr[j] > arr[largestIndex]) {
+        largestIndex = j;
       }
     }
     int tmp = arr[i];
-    arr[i] = arr[smallestIndex];
-    arr[smallestIndex] = tmp;
+    arr[i] = arr[largestIndex];
+    arr[largestIndex] = tmp;
   }
   cout << endl << "Output: ";
   display(arr, len);
