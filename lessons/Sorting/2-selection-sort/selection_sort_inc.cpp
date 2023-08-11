@@ -15,16 +15,20 @@ int main() {
   display(arr, len);
 
   for (int i = 0; i < len - 1; i++) {
-
-    int largestIndex = i;
+    // assume the first element is the smallest
+    int smallestIndex = i;
+    // iterate through the rest of the array and select an element smaller than
+    // the assumed element
     for (int j = i + 1; j < len; j++) {
-      if (arr[j] > arr[largestIndex]) {
-        largestIndex = j;
+      // if found, update the index of the smallest element
+      if (arr[j] < arr[smallestIndex]) {
+        smallestIndex = j;
       }
     }
+    // swap the smallest selected element with the assumed element
     int tmp = arr[i];
-    arr[i] = arr[largestIndex];
-    arr[largestIndex] = tmp;
+    arr[i] = arr[smallestIndex];
+    arr[smallestIndex] = tmp;
   }
   cout << endl << "Output: ";
   display(arr, len);

@@ -15,12 +15,15 @@ int main() {
 
   int i = 1;
   while (i < len) {
+    // pick and element to insert
     int to_insert = arr[i];
     int j = i - 1;
+    // shift elements to the right till the correct position is found
     while (j >= 0 && to_insert > arr[j]) {
       arr[j + 1] = arr[j];
       j--;
     }
+    // insert the element - j + 1 because j-- is done in the inner loop
     arr[j + 1] = to_insert;
     i++;
   }
