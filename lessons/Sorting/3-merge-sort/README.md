@@ -2,10 +2,14 @@
 
 ### About:
 
-Two approaches here
+Two approaches here:
+
+1. [Method1](./method1): Return, send and create new arrays whenever required - Java
+2. [Method2](./method2): Use indexes instead of everytime sending, returning and creating the arrays - C++
 
 ### Notes:
 
+- Time complexity: O(n\*log n)
 - Follows divide and conquer approach.
 - Must do three steps of divide and conquer approach:
   1. Divide: problem into smaller subproblems.
