@@ -4,8 +4,8 @@
 
 Two approaches here:
 
-1. [Method 1](./method1): Return, send and create new arrays whenever required - Java
-2. [Method 2](./method2): Use indexes instead of everytime sending, returning and creating the arrays - C++
+1. [Method 1](./method-1): Return, send and create new arrays whenever required - Java
+2. [Method 2](./method-2): Use indexes instead of everytime sending, returning and creating the arrays - C++
 
 ### Notes:
 

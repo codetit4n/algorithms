@@ -1,6 +1,6 @@
 # binary-search-recursive
 
-Binary search using recusrsion.
+Binary search using recursion.
 
 ### Run
 
