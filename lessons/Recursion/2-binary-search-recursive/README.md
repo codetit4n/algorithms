@@ -1,4 +1,4 @@
-# binary-search-recursive
+# Recursive Binary Search
 
 Binary search using recursion.
 
