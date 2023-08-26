@@ -1,8 +1,5 @@
 # Practice Problem - Better Inversions
 
-> **Warning**
-> TODO
-
 > CLRS Problems 2-4: Inversions
 
 ```text
