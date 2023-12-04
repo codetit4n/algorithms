@@ -1,3 +1,5 @@
+// Bubble sort algorithm in decreasing order
+
 #include <iostream>
 using namespace std;
 

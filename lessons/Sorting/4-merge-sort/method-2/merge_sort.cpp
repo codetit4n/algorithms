@@ -1,3 +1,5 @@
+// Merge sort implementation
+
 #include <iostream>
 using namespace std;
 

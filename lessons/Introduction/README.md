@@ -41,6 +41,6 @@ Code: [2.py](./2.py)
 
 Execute: `python3 2.py`
 
-Solution: For n = 5
+Solution: For n = 15
 
 ---

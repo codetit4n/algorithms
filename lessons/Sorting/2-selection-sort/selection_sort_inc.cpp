@@ -1,3 +1,5 @@
+// Selection sort in increasing order
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+// Selection sort in decreasing order
+
 #include <iostream>
 using namespace std;
 
@@ -20,6 +22,7 @@ int main() {
     // iterate through the rest of the array and select an element larger than
     // the assumed element
     for (int j = i + 1; j < len; j++) {
+      // if found, update the index of the largest element
       if (arr[j] > arr[largestIndex]) {
         largestIndex = j;
       }
