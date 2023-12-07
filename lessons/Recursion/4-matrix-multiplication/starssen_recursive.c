@@ -1,4 +1,5 @@
-// Recursive mtrix multiplication - Takes O(n^3) time
+// Starssens matrix multiplication algorithm - Takes O(n^2.81) time
+
 #include <stdio.h>
 
 void multiply(int, int, int A[][10], int, int, int B[][10], int C[][10]);
@@ -52,24 +53,7 @@ int main() {
 
 void multiply(int m, int n, int A[][10], int p, int q, int B[][10],
               int C[][10]) {
-
-  static int i = 0, j = 0, k = 0;
-
-  if (i < m) {
-    if (j < q) {
-      if (k < n) {
-        C[i][j] += A[i][k] * B[k][j];
-        k++;
-        multiply(m, n, A, p, q, B, C);
-      }
-      k = 0;
-      j++;
-      multiply(m, n, A, p, q, B, C);
-    }
-    j = 0;
-    i++;
-    multiply(m, n, A, p, q, B, C);
-  }
+  // todo
 }
 
 void display(int m, int n, int arr[][10]) {
