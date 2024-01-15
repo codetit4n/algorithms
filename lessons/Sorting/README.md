@@ -2,7 +2,8 @@
 
 ### Contains
 
-- [Insertion Sort](./1-insertion-sort/) - C++
-- [Selection Sort](./2-selection-sort/) - C++
-- [Bubble Sort](./3-bubble-sort/) - C++
-- [Merge Sort](./4-merge-sort/) - Java and C++
+- [Insertion Sort](./insertion-sort/) - C++
+- [Selection Sort](./selection-sort/) - C++
+- [Bubble Sort](./bubble-sort/) - C++
+- [Merge Sort](./merge-sort/) - Java and C++
+- [Cycle Sort](./cycle-sort/) - C

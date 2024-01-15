@@ -50,6 +50,28 @@ int main() {
   return 0;
 }
 
+// // Simple iterative matrix multiplication - O(n^3)
+//
+// three matrices A, B, C. C is the resultant matrix
+//
+// initialize matrix C with 0
+//
+// for (int i = 0; i < m; i++) {
+//   for (int j = 0; j < q; j++)
+//     C[i][j] = 0;
+// }
+//
+// multiply A and B and store in C
+//
+// for (int i = 0; i < m; i++) {
+//   for (int j = 0; j < q; j++) {
+//     for (int k = 0; k < n; k++) {
+//       C[i][j] += A[i][k] * B[k][j];
+//     }
+//   }
+// }
+
+// just doing the same thing recursively
 void multiply(int m, int n, int A[][10], int p, int q, int B[][10],
               int C[][10]) {
 
