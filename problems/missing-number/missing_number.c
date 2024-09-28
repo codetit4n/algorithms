@@ -1,10 +1,4 @@
-#include <stdio.h>
-
-void display(int arr[], int size) {
-  for (int i = 0; i < size; i++) {
-    printf("%d ", arr[i]);
-  }
-}
+#include "../../utils/array_utils.h"
 
 // cyclic sort approach
 int missing_number(int arr[], int size) {
@@ -34,9 +28,7 @@ int missing_number(int arr[], int size) {
 int main() {
   int arr[] = {3, 0, 1};
   int size = sizeof(arr) / sizeof(arr[0]);
-  printf("Input array: ");
-  display(arr, size);
-  printf("\n");
+  display_arr_1D_with_msg("Input array: ", arr, size);
 
   int missing = missing_number(arr, size);
   printf("\nIndex of missing number: %d\n", missing);

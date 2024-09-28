@@ -3,5 +3,5 @@
 **/node_modules
 **/build
 **/dist
-cexec/cexec
+utils/cexec
 output

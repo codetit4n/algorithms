@@ -10,5 +10,5 @@ only number in the range that is missing from the array.
 ### Run code
 
 ```bash
-sh execute.sh
+cexec missing_number.c
 ```

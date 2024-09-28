@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo rm -rf /usr/bin/cexec $PWD/cexec/cexec
-gcc $PWD/cexec/main.c -o $PWD/cexec/cexec
-sudo ln -s $PWD/cexec/cexec /usr/bin/cexec
+sudo rm -rf /usr/bin/cexec $PWD/utils/cexec
+gcc $PWD/utils/cexec.c -o $PWD/utils/cexec
+sudo ln -s $PWD/utils/cexec /usr/bin/cexec
