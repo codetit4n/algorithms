@@ -1,4 +1,4 @@
-#include "../../utils/array_utils.h"
+#include "../../utils/arrays.h"
 
 // cyclic sort approach
 int missing_number(int arr[], int size) {

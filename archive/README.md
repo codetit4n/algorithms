@@ -1,3 +1,3 @@
 # archive
 
-Archieved algorithms! Will remove in the future!
+Archieved algorithms! Will translate/remove in the future!

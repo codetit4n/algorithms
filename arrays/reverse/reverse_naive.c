@@ -1,14 +1,8 @@
 // Naive approach:
 
-// Step 1: Create a temporary array of same size as the original array.
-//
-// Step 2: Now, copy all elements from original array to the temporary array in
-// reverse order.
-//
-// Step 3: Finally, copy all the elements from temporary array back to
-// the original array.
+// Create a temporary array and copy elements in the required order.
 
-#include "../../utils/array_utils.h"
+#include "../../utils/arrays.h"
 
 void reverseArray(int arr[], int n) {
 
@@ -24,16 +18,15 @@ void reverseArray(int arr[], int n) {
 }
 
 int main() {
-  int arr[] = {2, 5, 9, 1, 5, 0, 2, 0, 1, 2, 9, 8, 5};
+
+  int arr[] = {2, 6, 9, 1, 7, 0, 3, 4, 8, 5};
   int size = sizeof(arr) / sizeof(arr[0]);
 
   display_arr_1D_with_msg("Array before: ", arr, size);
 
   reverseArray(arr, size);
 
-  display_arr_1D_with_msg("Array after: ", arr, size);
-
-  int arr1[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+  display_arr_1D_with_msg("Array after:  ", arr, size);
 
   return 0;
 }

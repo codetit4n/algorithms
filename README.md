@@ -9,6 +9,7 @@ sh setup.sh
 ```
 
 > This installs a binary `cexec` which can be used to run any C program in this repo!
+> Will be translating all the current code in other languages to C or C++. Prferrably C
 
 #### Usage
 
