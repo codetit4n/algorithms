@@ -1,26 +1,39 @@
 # algorithms
 
+> [!WARNING]\
+> (WIP) All the code in this repository is being translated to C.
+
 Algorithms Repo
 
-### Setup the C executor
+This repo contains implementations of various algorithms and data structures in C. Every C file contains the implementation and unit tests for the same.
+
+### Dependencies
+
+> NOTE: C++, Java, Python, and other languages dependencies not mentioned here, because repo is being translated to C.
+
+- `gcc` - GNU Compiler Collection.
+- [Criterion](https://github.com/Snaipe/Criterion.git) - For unit testing.
+
+### Setup the C executor - `cexec`
 
 ```shell
 sh setup.sh
 ```
 
 > This installs a binary `cexec` which can be used to run any C program in this repo!
-> Will be translating all the current code in other languages to C or C++. Prferrably C
 
-#### Usage
+#### Usage - Run any algorithm in a C file
+
+> This will run the unit tests in the C file
 
 ```shell
-cexec <path of C file>
+cexec <path to C file>
 ```
 
-### References
+### Resources and Credits
 
 1. [Introduction to Algorithms, 4th edition](https://en.wikipedia.org/wiki/Introduction_to_Algorithms) by
    Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein (CLRS)
-2. [Data Structures and Algorithms](https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ)
+2. [DSA articles](https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial) by [GeeksForGeeks](https://www.geeksforgeeks.org)
+3. [Data Structures and Algorithms](https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ)
    by [@kunal-kushwaha](https://github.com/kunal-kushwaha)
-3. [DSA articles](https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial) by [GeeksForGeeks](https://www.geeksforgeeks.org)

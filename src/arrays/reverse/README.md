@@ -8,4 +8,6 @@
 ### Complexities
 
 - Time complexity: `O(n)`
-- Space complexity: `O(1)` (`O(n)` for naive approach)
+- Space complexity:
+  - `O(n)` for naive approach
+  - `O(1)` for other approaches

@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
     return 1;
   } else if (pid == 0) {
 
-    execlp("gcc", "gcc", input_file, "-o", output_binary, NULL);
+    execlp("gcc", "gcc", input_file, "-o", output_binary, "-lcriterion", NULL);
 
     perror("Failed to run gcc");
 
