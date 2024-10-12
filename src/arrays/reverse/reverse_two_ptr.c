@@ -12,7 +12,7 @@ void swap(int *left, int *right) {
   *right = tmp;
 }
 
-void reverseArrayTwoPtr(int arr[], int n) {
+void reverseArrayTwoPtr(int *arr, int n) {
 
   int left = 0;
   int right = n - 1;
@@ -21,6 +21,15 @@ void reverseArrayTwoPtr(int arr[], int n) {
     swap(&arr[left], &arr[right]);
     left++;
     right--;
+  }
+}
+
+// -----------------------------------------------------------------
+
+void assert_arrays_eq(int *arr, int *expected, int size) {
+  for (int i = 0; i < size; i++) {
+    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
+                 arr[i], expected[i]);
   }
 }
 
@@ -41,10 +50,7 @@ Test(reverseArrayTwoPtr, test_1) {
 
   int expected[] = {5, 4, 3, 2, 1};
 
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
+  assert_arrays_eq(arr, expected, size);
 }
 
 Test(reverseArrayTwoPtr, test_2) {
@@ -64,8 +70,45 @@ Test(reverseArrayTwoPtr, test_2) {
 
   int expected[] = {2, 6, 9, 1, 7, 2, 0, 4, 8, 0};
 
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
+  assert_arrays_eq(arr, expected, size);
+}
+
+Test(reverseArrayTwoPtr, test_3) {
+  printf("Test 3\n");
+  int arr[] = {0};
+  int size = sizeof(arr) / sizeof(arr[0]);
+
+  printf("Original array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  reverseArrayTwoPtr(arr, size);
+
+  printf("Reversed array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  int expected[] = {0};
+
+  assert_arrays_eq(arr, expected, size);
+}
+
+Test(reverseArrayTwoPtr, test_4) {
+  printf("Test 4\n");
+  int arr[] = {};
+  int size = sizeof(arr) / sizeof(int);
+
+  printf("Original array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  reverseArrayTwoPtr(arr, size);
+
+  printf("Reversed array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  int expected[] = {};
+
+  assert_arrays_eq(arr, expected, size);
 }

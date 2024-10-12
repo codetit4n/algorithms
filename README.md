@@ -9,10 +9,10 @@ This repo contains implementations of various algorithms and data structures in 
 
 ### Dependencies
 
-> NOTE: C++, Java, Python, and other languages dependencies not mentioned here, because repo is being translated to C.
-
 - `gcc` - GNU Compiler Collection.
 - [Criterion](https://github.com/Snaipe/Criterion.git) - For unit testing.
+
+> NOTE: C++, Java, Python, and other languages dependencies not mentioned here, because repo is being translated to C.
 
 ### Setup the C executor - `cexec`
 
@@ -22,13 +22,13 @@ sh setup.sh
 
 > This installs a binary `cexec` which can be used to run any C program in this repo!
 
-#### Usage - Run any algorithm in a C file
-
-> This will run the unit tests in the C file
+#### Usage
 
 ```shell
 cexec <path to C file>
 ```
+
+> This will run the unit tests in the C file
 
 ### Resources and Credits
 

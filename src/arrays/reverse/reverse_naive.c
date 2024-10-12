@@ -5,7 +5,7 @@
 #include "../../../utils/arrays.h"
 #include <criterion/criterion.h>
 
-void reverseArray(int arr[], int n) {
+void reverseArray(int *arr, int n) {
 
   int tmp[n];
 
@@ -15,6 +15,15 @@ void reverseArray(int arr[], int n) {
 
   for (int i = 0; i < n; i++) {
     arr[i] = tmp[i];
+  }
+}
+
+// -----------------------------------------------------------------
+
+void assert_arrays_eq(int *arr, int *expected, int size) {
+  for (int i = 0; i < size; i++) {
+    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
+                 arr[i], expected[i]);
   }
 }
 
@@ -35,10 +44,7 @@ Test(reverseArray, test_1) {
 
   int expected[] = {5, 4, 3, 2, 1};
 
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
+  assert_arrays_eq(arr, expected, size);
 }
 
 Test(reverseArray, test_2) {
@@ -58,8 +64,45 @@ Test(reverseArray, test_2) {
 
   int expected[] = {5, 8, 4, 3, 0, 7, 1, 9, 6, 2};
 
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
+  assert_arrays_eq(arr, expected, size);
+}
+
+Test(reverseArray, test_3) {
+  printf("Test 3\n");
+  int arr[] = {2};
+  int size = sizeof(arr) / sizeof(arr[0]);
+
+  printf("Original array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  reverseArray(arr, size);
+
+  printf("Reversed array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  int expected[] = {2};
+
+  assert_arrays_eq(arr, expected, size);
+}
+
+Test(reverseArray, test_4) {
+  printf("Test 4\n");
+  int arr[] = {};
+  int size = sizeof(arr) / sizeof(int);
+
+  printf("Original array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  reverseArray(arr, size);
+
+  printf("Reversed array: ");
+  display_arr_1D(arr, size);
+  endl();
+
+  int expected[] = {};
+
+  assert_arrays_eq(arr, expected, size);
 }
