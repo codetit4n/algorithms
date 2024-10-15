@@ -5,6 +5,7 @@
 
 #include "../../../utils/arrays.h"
 #include <criterion/criterion.h>
+#include <criterion/new/assert.h>
 
 void swap(int *left, int *right) {
   int tmp = *left;
@@ -26,13 +27,6 @@ void reverseArrayTwoPtr(int *arr, int n) {
 
 // -----------------------------------------------------------------
 
-void assert_arrays_eq(int *arr, int *expected, int size) {
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
-}
-
 Test(reverseArrayTwoPtr, test_1) {
   printf("Test 1\n");
   int arr[] = {1, 2, 3, 4, 5};
@@ -50,7 +44,7 @@ Test(reverseArrayTwoPtr, test_1) {
 
   int expected[] = {5, 4, 3, 2, 1};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(reverseArrayTwoPtr, test_2) {
@@ -70,7 +64,7 @@ Test(reverseArrayTwoPtr, test_2) {
 
   int expected[] = {2, 6, 9, 1, 7, 2, 0, 4, 8, 0};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(reverseArrayTwoPtr, test_3) {
@@ -90,7 +84,7 @@ Test(reverseArrayTwoPtr, test_3) {
 
   int expected[] = {0};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(reverseArrayTwoPtr, test_4) {
@@ -110,5 +104,6 @@ Test(reverseArrayTwoPtr, test_4) {
 
   int expected[] = {};
 
-  assert_arrays_eq(arr, expected, size);
+  int size_expected = sizeof(expected) / sizeof(int);
+  cr_assert(eq(int, size, size_expected));
 }

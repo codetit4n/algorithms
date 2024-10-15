@@ -1,6 +1,7 @@
 // GCD using Euclidian iterative algorithm
 
 #include <criterion/criterion.h>
+#include <criterion/new/assert.h>
 #include <stdio.h>
 
 // using Euclidean method - iterative
@@ -29,7 +30,7 @@ Test(gcdEuclidianIterative, test_1) {
 
   printf("GCD of %d and %d is %d\n", a, b, result);
 
-  cr_assert_eq(result, expected, "Expected %d but got %d", expected, result);
+  cr_assert(eq(int, result, expected));
 }
 
 Test(gcdEuclidianIterative, test_2) {
@@ -42,7 +43,7 @@ Test(gcdEuclidianIterative, test_2) {
 
   printf("GCD of %d and %d is %d\n", a, b, result);
 
-  cr_assert_eq(result, expected, "Expected %d but got %d", expected, result);
+  cr_assert(eq(int, result, expected));
 }
 
 Test(gcdEuclidianIterative, test_3) {
@@ -55,7 +56,7 @@ Test(gcdEuclidianIterative, test_3) {
 
   printf("GCD of %d and %d is %d\n", a, b, result);
 
-  cr_assert_eq(result, expected, "Expected %d but got %d", expected, result);
+  cr_assert(eq(int, result, expected));
 }
 
 Test(gcdEuclidianIterative, test_4) {
@@ -68,5 +69,5 @@ Test(gcdEuclidianIterative, test_4) {
 
   printf("GCD of %d and %d is %d\n", a, b, result);
 
-  cr_assert_eq(result, expected, "Expected %d but got %d", expected, result);
+  cr_assert(eq(int, result, expected));
 }

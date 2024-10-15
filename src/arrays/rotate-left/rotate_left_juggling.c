@@ -6,6 +6,7 @@
 
 #include "../../../utils/arrays.h"
 #include <criterion/criterion.h>
+#include <criterion/new/assert.h>
 
 // using Euclidean method - recursive
 int gcd(int a, int b) {
@@ -58,13 +59,6 @@ void rotateArrayLeftJuggle(int *arr, int n, int d) {
 
 // -----------------------------------------------------------------
 
-void assert_arrays_eq(int *arr, int *expected, int size) {
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
-}
-
 Test(rotateArrayLeftJuggle, test_1) {
   printf("Test 1\n");
   int arr[] = {1, 2, 3, 4, 5};
@@ -83,13 +77,14 @@ Test(rotateArrayLeftJuggle, test_1) {
 
   int expected[] = {3, 4, 5, 1, 2};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(rotateArrayLeftJuggle, test_2) {
   printf("Test 2\n");
   int arr[] = {2, 6, 9, 1, 7, 0, 3, 4, 8, 5};
   int size = sizeof(arr) / sizeof(arr[0]);
+  printf("size: %d\n", size);
   int d = 3; // Positions to rotate by to the left
 
   printf("Original array: ");
@@ -104,7 +99,7 @@ Test(rotateArrayLeftJuggle, test_2) {
 
   int expected[] = {1, 7, 0, 3, 4, 8, 5, 2, 6, 9};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(rotateArrayLeftJuggle, test_3) {
@@ -125,7 +120,7 @@ Test(rotateArrayLeftJuggle, test_3) {
 
   int expected[] = {0};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(rotateArrayLeftJuggle, test_4) {
@@ -146,7 +141,9 @@ Test(rotateArrayLeftJuggle, test_4) {
 
   int expected[] = {};
 
-  assert_arrays_eq(arr, expected, size);
+  int size_expected = sizeof(expected) / sizeof(expected[0]);
+
+  cr_assert(eq(int, size, size_expected));
 }
 
 Test(rotateArrayLeftJuggle, test_5) {
@@ -167,5 +164,5 @@ Test(rotateArrayLeftJuggle, test_5) {
 
   int expected[] = {2, 1};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }

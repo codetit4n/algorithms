@@ -4,6 +4,7 @@
 
 #include "../../../utils/arrays.h"
 #include <criterion/criterion.h>
+#include <criterion/new/assert.h>
 
 void rotateArrayLeft(int *arr, int n, int d) {
 
@@ -23,13 +24,6 @@ void rotateArrayLeft(int *arr, int n, int d) {
 
 // -----------------------------------------------------------------
 
-void assert_arrays_eq(int *arr, int *expected, int size) {
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
-}
-
 Test(rotateArrayLeft, test_1) {
   printf("Test 1\n");
   int arr[] = {1, 2, 3, 4, 5};
@@ -48,7 +42,7 @@ Test(rotateArrayLeft, test_1) {
 
   int expected[] = {3, 4, 5, 1, 2};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(rotateArrayLeft, test_2) {
@@ -69,7 +63,7 @@ Test(rotateArrayLeft, test_2) {
 
   int expected[] = {1, 7, 0, 3, 4, 8, 5, 2, 6, 9};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(rotateArrayLeft, test_3) {
@@ -90,7 +84,7 @@ Test(rotateArrayLeft, test_3) {
 
   int expected[] = {0};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(rotateArrayLeft, test_4) {
@@ -111,5 +105,7 @@ Test(rotateArrayLeft, test_4) {
 
   int expected[] = {};
 
-  assert_arrays_eq(arr, expected, size);
+  int size_expected = sizeof(expected) / sizeof(expected[0]);
+
+  cr_assert(eq(int, size, size_expected));
 }

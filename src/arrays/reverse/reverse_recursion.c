@@ -5,6 +5,7 @@
 
 #include "../../../utils/arrays.h"
 #include <criterion/criterion.h>
+#include <criterion/new/assert.h>
 
 void swap(int *left, int *right) {
   int tmp = *left;
@@ -26,12 +27,7 @@ void reverseArrayRecursive(int *arr, int l, int r) {
   reverseArrayRecursive(arr, l + 1, r - 1);
 }
 
-void assert_arrays_eq(int *arr, int *expected, int size) {
-  for (int i = 0; i < size; i++) {
-    cr_assert_eq(arr[i], expected[i], "Element %d is %d but expected %d", i,
-                 arr[i], expected[i]);
-  }
-}
+// -----------------------------------------------------------------
 
 Test(reverseArrayRecursive, test_1) {
   printf("Test 1\n");
@@ -50,7 +46,7 @@ Test(reverseArrayRecursive, test_1) {
 
   int expected[] = {5, 4, 3, 2, 1};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(reverseArrayRecursive, test_2) {
@@ -70,7 +66,7 @@ Test(reverseArrayRecursive, test_2) {
 
   int expected[] = {2, 6, 9, 1, 7, 0, 3, 4, 8, 5};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(reverseArrayRecursive, test_3) {
@@ -90,7 +86,7 @@ Test(reverseArrayRecursive, test_3) {
 
   int expected[] = {5};
 
-  assert_arrays_eq(arr, expected, size);
+  cr_assert(eq(int[size], arr, expected));
 }
 
 Test(reverseArrayRecursive, test_4) {
@@ -110,5 +106,6 @@ Test(reverseArrayRecursive, test_4) {
 
   int expected[] = {};
 
-  assert_arrays_eq(arr, expected, size);
+  int size_expected = sizeof(expected) / sizeof(int);
+  cr_assert(eq(int, size, size_expected));
 }

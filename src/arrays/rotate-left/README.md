@@ -1,6 +1,6 @@
 # Rotate an Array by d – Counterclockwise or Left
 
-```
+```txt
 Given an array of integers arr[] of size n, the task is to rotate the
 array elements to the left by d positions.
 
