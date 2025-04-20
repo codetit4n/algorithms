@@ -17,11 +17,16 @@ typedef struct LinkedList {
 } LinkedList;
 
 
+void init_linked_list(LinkedList *ll);
+void free_linked_list(LinkedList *ll);
 void append_data(LinkedList* ll, int d);
-void append_node(LinkedList* ll, Node* n);
+void prepend_data(LinkedList* ll, int d);
 void print_linked_list(LinkedList *ll);
-void print_node(Node *n);
+void print_node(Node *n, unsigned int nl);
+int is_empty(LinkedList *ll);
+size_t get_size(LinkedList *ll);
 
+void create_ll_using_array(LinkedList *ll, int *arr, size_t size);
 
 
 #endif // LINKED_LIST_H
