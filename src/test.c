@@ -1,15 +1,13 @@
-#include "list/linked_list.h"
+#include "stack/stack.h"
 
 int main() {
 
-  LinkedList ll;
-  init_linked_list(&ll);
+  Stack s;
 
-  create_ll_using_array(&ll, (int[]){1, 2, 3, 4, 5}, 5);
-
-  print_linked_list(&ll);
-
-  free_linked_list(&ll);
+  init_stack(&s);
+  create_stack_using_array(&s, (int[]){1, 4, 5, 2, 9, 7}, 6);
+  print_stack(&s);
+  free_stack(&s);
 
   return 0;
 }

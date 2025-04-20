@@ -24,7 +24,6 @@ void prepend_data(LinkedList* ll, int d);
 void print_linked_list(LinkedList *ll);
 void print_node(Node *n, unsigned int nl);
 int is_empty(LinkedList *ll);
-size_t get_size(LinkedList *ll);
 
 void create_ll_using_array(LinkedList *ll, int *arr, size_t size);
 

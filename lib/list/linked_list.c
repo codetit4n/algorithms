@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int is_empty(LinkedList *ll) {
+int is_empty_list(LinkedList *ll) {
 
   if (!ll) {
     return 1;
@@ -51,7 +51,7 @@ void print_node(Node *n, unsigned int nl) {
 
 void print_linked_list(LinkedList *ll) {
 
-  if (is_empty(ll)) {
+  if (is_empty_list(ll)) {
     printf("Empty list!\n");
     return;
   }
