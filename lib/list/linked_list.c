@@ -1,3 +1,16 @@
+/**
+ * @file    linked_list.c
+ * @brief   Minimal linked list implementation
+ * @details This file contains the implementation of a linked list data
+ *          structure and its associated functions. The linked list is
+ *          implemented using a dynamic memory allocation to allow for flexible
+ *          memory management.
+ *
+ * @author  Lokesh Kumar (codetit4n on GitHub)
+ * @date    2025-04-20
+ * @version 1.0
+ */
+
 #include "linked_list.h"
 #include <stdio.h>
 #include <stdlib.h>

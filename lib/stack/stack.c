@@ -1,3 +1,15 @@
+/**
+ * @file    stack.c
+ * @brief   Minimal stack implementation
+ * @details This file contains the implementation of a stack data structure
+ *         and its associated functions. The stack is implemented using
+ *         a dynamic array to allow for flexible memory management.
+ *
+ * @author  Lokesh Kumar (codetit4n on GitHub)
+ * @date    2025-04-21
+ * @version 1.0
+ */
+
 #include "stack.h"
 #include <stddef.h>
 #include <stdio.h>

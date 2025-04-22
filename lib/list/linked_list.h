@@ -1,3 +1,15 @@
+/**
+ * @file    linked_list.h
+ * @brief   Header file for minimal linked list implementation
+ * @details This file contains the definition of a linked list data
+ *          structure and its associated functions. The linked list is implemented
+ *          using a dynamic memory allocation to allow for flexible memory management.
+ *
+ * @author  Lokesh Kumar (codetit4n on GitHub)
+ * @date    2025-04-20
+ * @version 1.0
+ */
+
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 
