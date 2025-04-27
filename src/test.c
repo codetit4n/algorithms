@@ -1,14 +1,17 @@
-#include "stack/stack.h"
+#include "vector/vector.h"
 
 int main() {
 
-  Stack s;
+  Vector v;
 
-  init_stack(&s);
-  create_stack_using_array(&s, (int[]){1, 4, 5, 2, 9, 7}, 6);
-  push(&s, 19);
-  print_stack(&s);
-  free_stack(&s);
+  vector_init(&v);
+  vector_push_back(&v, 39);
+  vector_push_back(&v, 57);
+  vector_push_back(&v, 23);
+  vector_push_back(&v, 10);
+  vector_push_back(&v, 90);
+  vector_print(&v);
+  vector_free(&v);
 
   return 0;
 }

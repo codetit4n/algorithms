@@ -22,14 +22,14 @@ typedef struct Stack {
     size_t capacity; // Total elements that could fit before need for more memory
 } Stack;
 
-void init_stack(Stack *s);
-void free_stack(Stack *s);
-void push(Stack *s, int v);
-bool top(const Stack *s, int *out);
-bool pop(Stack *s, int *out);
-int is_empty_stack(Stack *s);
-void print_stack(const Stack *s);
+void stack_init(Stack *s);
+void stack_free(Stack *s);
+void stack_push(Stack *s, int v);
+bool stack_top(const Stack *s, int *out);
+bool stack_pop(Stack *s, int *out);
+int stack_is_empty(const Stack *s);
+void stack_print(const Stack *s);
 
-void create_stack_using_array(Stack *s, int *arr, size_t size);
+void stack_create_using_array(Stack *s, int *arr, size_t size);
 
 #endif // STACK_H

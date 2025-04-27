@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int is_empty_stack(Stack *s) {
+int stack_is_empty(const Stack *s) {
   if (!s) {
     return 1;
   }
@@ -23,13 +23,13 @@ int is_empty_stack(Stack *s) {
   return s->size == 0;
 }
 
-void init_stack(Stack *s) {
+void stack_init(Stack *s) {
   s->data = NULL;
   s->size = 0;
   s->capacity = 0;
 }
 
-void free_stack(Stack *s) {
+void stack_free(Stack *s) {
 
   if (!s) {
     return;
@@ -41,7 +41,7 @@ void free_stack(Stack *s) {
   s->capacity = 0;
 }
 
-bool top(const Stack *s, int *out) {
+bool stack_top(const Stack *s, int *out) {
   if (!s || s->size == 0) {
     return false;
   }
@@ -50,7 +50,7 @@ bool top(const Stack *s, int *out) {
   return true;
 }
 
-void push(Stack *s, int v) {
+void stack_push(Stack *s, int v) {
   if (s->size == s->capacity) {
     size_t new_capacity =
         s->capacity == 0 ? 4 : s->capacity * 2; // ensures amortization
@@ -67,8 +67,8 @@ void push(Stack *s, int v) {
   s->data[s->size++] = v;
 }
 
-bool pop(Stack *s, int *out) {
-  if (is_empty_stack(s)) {
+bool stack_pop(Stack *s, int *out) {
+  if (stack_is_empty(s)) {
     return false;
   }
   *out = s->data[s->size - 1];
@@ -76,17 +76,17 @@ bool pop(Stack *s, int *out) {
   return true;
 }
 
-void create_stack_using_array(Stack *s, int *arr, size_t size) {
+void stack_create_using_array(Stack *s, int *arr, size_t size) {
   if (!s || !arr || size == 0) {
     return;
   }
 
   for (size_t i = 0; i < size; i++) {
-    push(s, arr[i]);
+    stack_push(s, arr[i]);
   }
 }
 
-void print_stack(const Stack *s) {
+void stack_print(const Stack *s) {
   if (!s || s->size == 0) {
     printf("Empty stack!\n");
     return;

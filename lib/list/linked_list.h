@@ -29,15 +29,15 @@ typedef struct LinkedList {
 } LinkedList;
 
 
-void init_linked_list(LinkedList *ll);
-void free_linked_list(LinkedList *ll);
-void append_data(LinkedList* ll, int d);
-void prepend_data(LinkedList* ll, int d);
-void print_linked_list(LinkedList *ll);
-void print_node(Node *n, unsigned int nl);
-int is_empty(LinkedList *ll);
+void linked_list_init(LinkedList *ll);
+void linked_list_free(LinkedList *ll);
+void linked_list_append_data(LinkedList* ll, int d);
+void linked_list_prepend_data(LinkedList* ll, int d);
+void linked_list_print(LinkedList *ll);
+void linked_list_print_node(Node *n, unsigned int nl);
+int linked_list_is_empty(LinkedList *ll);
 
-void create_ll_using_array(LinkedList *ll, int *arr, size_t size);
+void linked_list_create_using_array(LinkedList *ll, int *arr, size_t size);
 
 
 #endif // LINKED_LIST_H

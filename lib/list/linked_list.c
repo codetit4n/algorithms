@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int is_empty_list(LinkedList *ll) {
+int linked_list_is_empty(LinkedList *ll) {
 
   if (!ll) {
     return 1;
@@ -24,13 +24,13 @@ int is_empty_list(LinkedList *ll) {
   return ll->size == 0;
 }
 
-void init_linked_list(LinkedList *ll) {
+void linked_list_init(LinkedList *ll) {
   ll->head = NULL;
   ll->tail = NULL;
   ll->size = 0;
 }
 
-void free_linked_list(LinkedList *ll) {
+void linked_list_free(LinkedList *ll) {
 
   if (!ll) {
     return;
@@ -48,7 +48,7 @@ void free_linked_list(LinkedList *ll) {
   ll->size = 0;
 }
 
-void print_node(Node *n, unsigned int nl) {
+void linked_list_print_node(Node *n, unsigned int nl) {
 
   if (!n) {
     printf("NULL\n");
@@ -62,9 +62,9 @@ void print_node(Node *n, unsigned int nl) {
   }
 }
 
-void print_linked_list(LinkedList *ll) {
+void linked_list_print(LinkedList *ll) {
 
-  if (is_empty_list(ll)) {
+  if (linked_list_is_empty(ll)) {
     printf("Empty list!\n");
     return;
   }
@@ -73,14 +73,14 @@ void print_linked_list(LinkedList *ll) {
   Node *n = ll->head;
 
   while (n != NULL) {
-    print_node(n, 0);
+    linked_list_print_node(n, 0);
     printf(" -> ");
     n = n->next;
   }
   printf("TAIL\n");
 }
 
-void append_data(LinkedList *ll, int d) {
+void linked_list_append_data(LinkedList *ll, int d) {
 
   Node *n = malloc(sizeof(Node));
   if (!n) {
@@ -101,7 +101,7 @@ void append_data(LinkedList *ll, int d) {
   ll->size++;
 }
 
-void prepend_data(LinkedList *ll, int d) {
+void linked_list_prepend_data(LinkedList *ll, int d) {
 
   Node *n = malloc(sizeof(Node));
 
@@ -123,13 +123,13 @@ void prepend_data(LinkedList *ll, int d) {
   ll->size++;
 }
 
-void create_ll_using_array(LinkedList *ll, int *arr, size_t size) {
+void linked_list_create_using_array(LinkedList *ll, int *arr, size_t size) {
 
   if (!ll || !arr || size == 0) {
     return;
   }
 
   for (size_t i = 0; i < size; i++) {
-    append_data(ll, arr[i]);
+    linked_list_append_data(ll, arr[i]);
   }
 }

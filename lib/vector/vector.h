@@ -22,13 +22,13 @@ typedef struct Vector {
     size_t capacity; // Total elements that could fit before need for more memory
 } Vector;
 
-void init_vector(Vector *v);
-void free_vector(Vector *v);
-void push_back(Vector *v, int d);
-bool pop_back(Vector *v, int *out);
-bool get_element(const Vector *v, size_t idx, int *out);
-int is_empty_vector(Vector *v);
-void print_vector(const Vector *v);
+void vector_init(Vector *v);
+void vector_free(Vector *v);
+void vector_push_back(Vector *v, int d);
+bool vector_pop_back(Vector *v, int *out);
+bool vector_get_element(const Vector *v, size_t idx, int *out);
+int vector_is_empty(const Vector *v);
+void vector_print(const Vector *v);
 
 
 #endif // VECTOR_H
